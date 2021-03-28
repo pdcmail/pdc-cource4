@@ -4,7 +4,6 @@
 from functools import reduce
 import math
 import time
-import random
 
 numbers = []
 
@@ -20,7 +19,7 @@ def is_prime(number):
 
 
 def get_num() -> int:
-    number = random.randrange(1,3)
+    number = int(input("Input the step: "))
     if not (number == 1 or number == 2):
         get_num()
     return number
