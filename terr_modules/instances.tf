@@ -1,5 +1,3 @@
-terraform import aws_key_pair.pdc-key-pair pdc-key-pair
-
 resource "aws_instance" "pdc_instance_1" {
     count = "${var.COUNT}"
     ami = "${lookup(var.AMI, var.AWS_REGION)}"
