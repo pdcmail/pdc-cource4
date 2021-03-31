@@ -25,7 +25,7 @@ resource "aws_route_table_association" "prod-crta-public-subnet-1" {
 }
 
 resource "aws_security_group" "allowed_trafic" {
-    vpc_id = "aws_vpc.prod-vpc.id"
+    vpc_id = "${aws_vpc.prod-vpc.id}"
 
     egress {
         from_port = 0
