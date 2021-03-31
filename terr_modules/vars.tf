@@ -2,8 +2,13 @@ variable "AWS_REGION" {
     default = "us-east-1"
 }
 
+variable "AVAILABILITY_ZONE" {
+    default = "us-east-1a"
+}
+
 variable "AMI" {
     type = "map"
+
     default = {
         eu-central-1 = "ami-0767046d1677be5a0"
         us-east-1 = "ami-042e8287309f5df03"
