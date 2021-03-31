@@ -4,11 +4,11 @@
 
 # install packages
 
-if ! dpkg --list  | grep -Po "git"; then
+if ! [[ $(dpkg --list  | grep -Po 'git' | head -1) ]]; then
     sudo apt-get update && apt-get install git
 fi
 
-if ! dpkg --list  | grep -oP "python3\..*"; then
+if ! [[ $(dpkg --list  | grep -oP "python3.9") ]]; then
     sudo apt update && sudo apt -y upgrade
     sudo apt install software-properties-common
     sudo add-apt-repository ppa:deadsnakes/ppa
